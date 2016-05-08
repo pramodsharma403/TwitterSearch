@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="QFa-zk-KtE">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Xj-QO-V3g"/>
+                        <viewControllerLayoutGuide type="bottom" id="A0g-88-hsL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxG-zU-iIl">
+                                <rect key="frame" x="74" y="49" width="173" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="twitterLoginBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J0u-j7-7qt"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Search Query" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q2V-6l-wqb">
+                                <rect key="frame" x="25" y="109" width="269" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xcl-1x-SSC">
+                                <rect key="frame" x="101" y="188" width="120" height="30"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="searchBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XA0-K6-NFo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q2V-6l-wqb" secondAttribute="trailing" constant="10" id="1yA-as-Un9"/>
+                            <constraint firstItem="oxG-zU-iIl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="58" id="38E-aT-gVt"/>
+                            <constraint firstItem="Xcl-1x-SSC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="85" id="DeK-Hd-wnc"/>
+                            <constraint firstItem="Q2V-6l-wqb" firstAttribute="top" secondItem="oxG-zU-iIl" secondAttribute="bottom" constant="30" id="PIi-QW-usL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xcl-1x-SSC" secondAttribute="trailing" constant="83" id="Rh2-aZ-j4l"/>
+                            <constraint firstItem="Xcl-1x-SSC" firstAttribute="top" secondItem="Q2V-6l-wqb" secondAttribute="bottom" constant="49" id="nZ6-lQ-pM1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oxG-zU-iIl" secondAttribute="trailing" constant="57" id="uD9-XN-xiN"/>
+                            <constraint firstItem="Q2V-6l-wqb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="9" id="w1c-Ff-39i"/>
+                            <constraint firstItem="oxG-zU-iIl" firstAttribute="top" secondItem="2Xj-QO-V3g" secondAttribute="bottom" constant="49" id="zJe-vj-GGV"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" id="oe0-ht-EVL"/>
+                    <connections>
+                        <outlet property="btnTwitterLogin" destination="oxG-zU-iIl" id="ffQ-xR-6ab"/>
+                        <outlet property="txtSearch" destination="Q2V-6l-wqb" id="MXd-E6-ucu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="662" y="278"/>
+        </scene>
+        <!--Search Result View Controller-->
+        <scene sceneID="9h8-NF-B6B">
+            <objects>
+                <viewController storyboardIdentifier="searchResultView" id="KUA-MO-dOw" customClass="SearchResultViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PbO-gp-R7g"/>
+                        <viewControllerLayoutGuide type="bottom" id="CFb-oZ-4Sr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ulk-YH-xGr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hXp-Ol-aHq">
+                                <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="KUA-MO-dOw" id="yiP-Jc-tuN"/>
+                                    <outlet property="delegate" destination="KUA-MO-dOw" id="JRe-Wq-kJH"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="hXp-Ol-aHq" secondAttribute="trailing" constant="-20" id="0sA-5w-jm3"/>
+                            <constraint firstItem="hXp-Ol-aHq" firstAttribute="top" secondItem="Ulk-YH-xGr" secondAttribute="topMargin" id="US3-Vt-faq"/>
+                            <constraint firstItem="CFb-oZ-4Sr" firstAttribute="top" secondItem="hXp-Ol-aHq" secondAttribute="bottom" id="aRS-IL-IjB"/>
+                            <constraint firstItem="hXp-Ol-aHq" firstAttribute="leading" secondItem="Ulk-YH-xGr" secondAttribute="leadingMargin" constant="-20" id="z41-zh-Ads"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tblResult" destination="hXp-Ol-aHq" id="x74-OV-Zau"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bEr-qK-aP8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1153" y="278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UMf-gP-vRv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QFa-zk-KtE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="s3a-YM-YVw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qGw-po-YS4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jv9-sA-Rnq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="278"/>
+        </scene>
+    </scenes>
+</document>
